@@ -116,8 +116,9 @@ exports.paytmResponse = (req, res, next) => {
                     // let status = body.resultInfo.resultStatus;
                     // res.json(body);
                     addPayment(body);
+                    res.redirect(`http://localhost:3000/`)
                     // res.redirect(`${req.protocol}://${req.get("host")}/order/${body.orderId}`)
-                    res.redirect(`https://${req.get("host")}/order/${body.orderId}`)
+                    // res.redirect(`https://${req.get("host")}/order/${body.orderId}`)
                 });
             });
 
