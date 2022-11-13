@@ -41,7 +41,7 @@ exports.processPayment = asyncErrorHandler(async (req, res, next) => {
     params["CUST_ID"] = process.env.PAYTM_CUST_ID;
     params["TXN_AMOUNT"] = JSON.stringify(amount);
     // params["CALLBACK_URL"] = `${req.protocol}://${req.get("host")}/api/v1/callback`;
-    params["CALLBACK_URL"] = `http://${req.get("host")}/api/v1/callback`;
+    params["CALLBACK_URL"] = `https://${req.get("host")}/api/v1/callback`;
     params["EMAIL"] = email;
     params["MOBILE_NO"] = phoneNo;
 
